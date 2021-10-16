@@ -1,0 +1,21 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'playground/styles/base.css' %}">
+<h1 class="hello">Hello there  </h1>
+  <p>This is the login Page</p>
+      <br>
+  
+      <form action="{% url 'home' %}">
+          <div class="container">
+            <h1>Register</h1>
+            <p>Enter Account Details</p>
+            <hr>
+        
+            <label><b>Email</b></label>
+            <input type="text" placeholder="Enter Email" name="email" id="email" required>
+        
+            <label><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="psw" id="psw" required>
+            <button type="submit" class="register">Login</button>
+          </div>
+        </form>
+      <a href="/">Back to Home Page?</a>

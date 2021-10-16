@@ -1,0 +1,10 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.hello{
+    display: flex;
+    color: green;
+    font-size: large;
+}
