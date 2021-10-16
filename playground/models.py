@@ -5,6 +5,7 @@ class User(models.Model):
     name = models.CharField(max_length=200)
     age = models.IntegerField()
     slug = models.SlugField(unique=True)
+    university = models.CharField(max_length=255)
 
 
     
