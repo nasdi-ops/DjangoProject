@@ -4,18 +4,18 @@
   <p>This is the login Page</p>
       <br>
   
-      <form action="{% url 'home' %}">
+      <form action="/login" method="post">
           <div class="container">
             <h1>Register</h1>
             <p>Enter Account Details</p>
             <hr>
-        
-            <label><b>Email</b></label>
-            <input type="text" placeholder="Enter Email" name="email" id="email" required>
-        
+            {% csrf_token %}
+            <label><b>Username</b></label>
+            <input type="text" placeholder="Enter Username" name="username" id="username" required>
             <label><b>Password</b></label>
             <input type="password" placeholder="Enter Password" name="psw" id="psw" required>
-            <button type="submit" class="register">Login</button>
+
+            <button type="submit" class="register" name="save">Login</button>
           </div>
         </form>
       <a href="/">Back to Home Page?</a>

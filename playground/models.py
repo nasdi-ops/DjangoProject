@@ -1,11 +1,13 @@
+
 from django.db import models
 
 # Create your models here.
 class User(models.Model):
-    name = models.CharField(max_length=200)
-    age = models.IntegerField()
-    slug = models.SlugField(unique=True)
-    university = models.CharField(max_length=255)
+    username = models.CharField(max_length=200, unique=True,  default='null')
+    password = models.CharField(max_length=200, default='null')
+
+    def __str__(self):
+        return self.username
 
 
     
